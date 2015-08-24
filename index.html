@@ -29,8 +29,12 @@
 <script>
 (function(){
 
-  var co = $('span.co').each(funchtion() {
-    $(this).closest('p').prepend('hi there');
+  var co = $('article').find('span.co').each(funchtion() {
+    var $this = $(this);
+    $('<blockquote></blockquote>',{
+      class: 'co',
+      text: $this.text()
+    }).prepentTo($this.closest('p'));
   })
 
 })();
